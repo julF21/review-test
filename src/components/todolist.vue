@@ -53,7 +53,7 @@ const store = useToDoList()
     <button @click="addTodo">Add</button>
 
     <ul class="todo-list">
-      <li v-for="(todo, i) in todos" :key="todo.order">
+      <li v-for="(todo, i) in todos" :key="i">
         <div>
           <span><strong>{{ i+ 1 }}.</strong> {{ todo.title }}</span>
         </div>
@@ -61,7 +61,7 @@ const store = useToDoList()
           <span :class="{'completed': todo.completed}">
             {{ status }}
           </span>
-          <button class="delete-btn" @click="deleteTodo(todo.order)">Delete</button>
+          <button class="delete-btn" @click="deleteTodo">Delete</button>
         </div>
       </li>
     </ul>

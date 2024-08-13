@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import todolist from './components/todolist.vue'
+
 </script>
 
 <template>
-  <todolist></todolist>
+  <router-view></router-view>
 </template>
 
 <style>
